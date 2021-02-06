@@ -1,0 +1,32 @@
+C:\Users\Roman\Desktop\geekbrains\c#\homeworks\homework5\Project 4\Program.cs
+C:\Users\Roman\Desktop\geekbrains\c#\homeworks\homework5\Project 4\Project 4
+C:\Users\Roman\Desktop\geekbrains\c#\homeworks\homework5\Project 4\Project 4.csproj
+C:\Users\Roman\Desktop\geekbrains\c#\homeworks\homework5\Project 4\System.IO.FileStream
+C:\Users\Roman\Desktop\geekbrains\c#\homeworks\homework5\Project 4\text.txt
+C:\Users\Roman\Desktop\geekbrains\c#\homeworks\homework5\Project 4\.vscode\launch.json
+C:\Users\Roman\Desktop\geekbrains\c#\homeworks\homework5\Project 4\.vscode\tasks.json
+C:\Users\Roman\Desktop\geekbrains\c#\homeworks\homework5\Project 4\obj\Project 4.csproj.nuget.dgspec.json
+C:\Users\Roman\Desktop\geekbrains\c#\homeworks\homework5\Project 4\obj\Project 4.csproj.nuget.g.props
+C:\Users\Roman\Desktop\geekbrains\c#\homeworks\homework5\Project 4\obj\Project 4.csproj.nuget.g.targets
+C:\Users\Roman\Desktop\geekbrains\c#\homeworks\homework5\Project 4\obj\project.assets.json
+C:\Users\Roman\Desktop\geekbrains\c#\homeworks\homework5\Project 4\obj\project.nuget.cache
+C:\Users\Roman\Desktop\geekbrains\c#\homeworks\homework5\Project 4\bin\Debug\net5.0\Project 4.deps.json
+C:\Users\Roman\Desktop\geekbrains\c#\homeworks\homework5\Project 4\bin\Debug\net5.0\Project 4.dll
+C:\Users\Roman\Desktop\geekbrains\c#\homeworks\homework5\Project 4\bin\Debug\net5.0\Project 4.exe
+C:\Users\Roman\Desktop\geekbrains\c#\homeworks\homework5\Project 4\bin\Debug\net5.0\Project 4.pdb
+C:\Users\Roman\Desktop\geekbrains\c#\homeworks\homework5\Project 4\bin\Debug\net5.0\Project 4.runtimeconfig.dev.json
+C:\Users\Roman\Desktop\geekbrains\c#\homeworks\homework5\Project 4\bin\Debug\net5.0\Project 4.runtimeconfig.json
+C:\Users\Roman\Desktop\geekbrains\c#\homeworks\homework5\Project 4\obj\Debug\net5.0\.NETCoreApp,Version=v5.0.AssemblyAttributes.cs
+C:\Users\Roman\Desktop\geekbrains\c#\homeworks\homework5\Project 4\obj\Debug\net5.0\apphost.exe
+C:\Users\Roman\Desktop\geekbrains\c#\homeworks\homework5\Project 4\obj\Debug\net5.0\Project 4.AssemblyInfo.cs
+C:\Users\Roman\Desktop\geekbrains\c#\homeworks\homework5\Project 4\obj\Debug\net5.0\Project 4.AssemblyInfoInputs.cache
+C:\Users\Roman\Desktop\geekbrains\c#\homeworks\homework5\Project 4\obj\Debug\net5.0\Project 4.assets.cache
+C:\Users\Roman\Desktop\geekbrains\c#\homeworks\homework5\Project 4\obj\Debug\net5.0\Project 4.csproj.CoreCompileInputs.cache
+C:\Users\Roman\Desktop\geekbrains\c#\homeworks\homework5\Project 4\obj\Debug\net5.0\Project 4.csproj.FileListAbsolute.txt
+C:\Users\Roman\Desktop\geekbrains\c#\homeworks\homework5\Project 4\obj\Debug\net5.0\Project 4.csprojAssemblyReference.cache
+C:\Users\Roman\Desktop\geekbrains\c#\homeworks\homework5\Project 4\obj\Debug\net5.0\Project 4.dll
+C:\Users\Roman\Desktop\geekbrains\c#\homeworks\homework5\Project 4\obj\Debug\net5.0\Project 4.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Roman\Desktop\geekbrains\c#\homeworks\homework5\Project 4\obj\Debug\net5.0\Project 4.genruntimeconfig.cache
+C:\Users\Roman\Desktop\geekbrains\c#\homeworks\homework5\Project 4\obj\Debug\net5.0\Project 4.pdb
+C:\Users\Roman\Desktop\geekbrains\c#\homeworks\homework5\Project 4\bin\Debug\net5.0\ref\Project 4.dll
+C:\Users\Roman\Desktop\geekbrains\c#\homeworks\homework5\Project 4\obj\Debug\net5.0\ref\Project 4.dll
