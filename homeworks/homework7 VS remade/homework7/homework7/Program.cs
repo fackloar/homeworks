@@ -4,7 +4,7 @@ namespace Project_1
 {
     class Program
     {
-     
+
         static public bool EqualSlices(int totalSlices, int peopleNumber, int slicesEach)
         {
             bool equalSlices = true;
@@ -21,7 +21,7 @@ namespace Project_1
             {
                 equalSlices = true;
             }
-            return equalSlices; 
+            return equalSlices;
         }
         static void Main(string[] args)
         {
