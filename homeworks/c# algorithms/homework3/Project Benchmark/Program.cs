@@ -11,6 +11,14 @@ namespace Project_Benchmark
         {
             BenchmarkSwitcher.FromAssembly(typeof(Program).Assembly).Run(args);
             Console.ReadKey();
+
+
+            /*  |                              Method |       Mean |     Error |    StdDev |     Median |
+                |------------------------------------ |-----------:|----------:|----------:|-----------:|
+                |              TestPointDistanceClass | 26.6552 ns | 1.2740 ns | 3.7564 ns | 26.7525 ns |
+                |             TestPointDistanceStruct |  0.0093 ns | 0.0129 ns | 0.0115 ns |  0.0057 ns |
+                |       TestPointDistanceDoubleStruct |  0.0106 ns | 0.0106 ns | 0.0083 ns |  0.0105 ns |
+                | TestPointDistanceDoubleStructNoRoot |  0.0171 ns | 0.0288 ns | 0.0270 ns |  0.0000 ns | */ 
         }
     }
 
