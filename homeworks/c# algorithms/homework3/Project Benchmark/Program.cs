@@ -13,12 +13,12 @@ namespace Project_Benchmark
             Console.ReadKey();
 
 
-            /*  |                              Method |       Mean |     Error |    StdDev |     Median |
-                |------------------------------------ |-----------:|----------:|----------:|-----------:|
-                |              TestPointDistanceClass | 26.6552 ns | 1.2740 ns | 3.7564 ns | 26.7525 ns |
-                |             TestPointDistanceStruct |  0.0093 ns | 0.0129 ns | 0.0115 ns |  0.0057 ns |
-                |       TestPointDistanceDoubleStruct |  0.0106 ns | 0.0106 ns | 0.0083 ns |  0.0105 ns |
-                | TestPointDistanceDoubleStructNoRoot |  0.0171 ns | 0.0288 ns | 0.0270 ns |  0.0000 ns | */ 
+            /*  |                              Method |     Mean |    Error |   StdDev |
+                |------------------------------------ |---------:|---------:|---------:|
+                |              TestPointDistanceClass | 11.65 us | 0.096 us | 0.090 us |
+                |             TestPointDistanceStruct | 11.50 us | 0.131 us | 0.123 us |
+                |       TestPointDistanceDoubleStruct | 11.67 us | 0.132 us | 0.124 us |
+                | TestPointDistanceDoubleStructNoRoot | 11.54 us | 0.096 us | 0.085 us | */
         }
     }
 
@@ -96,6 +96,7 @@ namespace Project_Benchmark
         [Benchmark]
         public void TestPointDistanceClass()
         {
+            RandCoords();
             PointClass pointOne = new PointClass() { X = RandFloatX1, Y = RandFloatY1 };
             PointClass pointTwo = new PointClass() { X = RandFloatX2, Y = RandFloatY2 };
             PointDistanceClass(pointOne, pointTwo);
@@ -104,6 +105,7 @@ namespace Project_Benchmark
         [Benchmark]
         public void TestPointDistanceStruct()
         {
+            RandCoords();
             PointStructFloat pointOne = new PointStructFloat() { X = RandFloatX1, Y = RandFloatY1 };
             PointStructFloat pointTwo = new PointStructFloat() { X = RandFloatX2, Y = RandFloatY2 };
             PointDistanceStruct(pointOne, pointTwo);
@@ -112,6 +114,7 @@ namespace Project_Benchmark
         [Benchmark]
         public void TestPointDistanceDoubleStruct()
         {
+            RandCoords();
             PointStructDouble pointOne = new PointStructDouble() { X = (double)RandFloatX1, Y = (double)RandFloatY1 };
             PointStructDouble pointTwo = new PointStructDouble() { X = (double)RandFloatX2, Y = (double)RandFloatY2 };
             PointDistanceDoubleStruct(pointOne, pointTwo);
@@ -120,6 +123,7 @@ namespace Project_Benchmark
         [Benchmark]
         public void TestPointDistanceDoubleStructNoRoot()
         {
+            RandCoords();
             PointStructDouble pointOne = new PointStructDouble() { X = (double)RandFloatX1, Y = (double)RandFloatY1 };
             PointStructDouble pointTwo = new PointStructDouble() { X = (double)RandFloatX2, Y = (double)RandFloatY2 };
             PointDistanceDoubleStructNoRoot(pointOne, pointTwo);
