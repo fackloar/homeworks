@@ -24,8 +24,8 @@ namespace Graph_BFS_DFS
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            //Test1();
-            //Test2();
+            Test1();
+            Test2();
             Test3();
 
             Console.ReadLine();
@@ -74,7 +74,7 @@ namespace Graph_BFS_DFS
             AddEdge(NodeD, NodeE, 2);
             AddEdge(NodeE, NodeF, 3);
             DFS(NodeA, 10);
-            Console.WriteLine("\nExpected output: \n===> (10) ===4===> (20) ===6===> (30) ===8===> (40) ===2===> (50) ===3===> (60) ===10===> (going to 50 and) STOP");
+            Console.WriteLine("\nExpected output: \n===> (10) ===4===> (20) ===6===> (30) ===8===> (40) ===2===> (50) ===3===> (60) ======> STOP");
             ClearVisited(NodeA);
             BFS(NodeA, 10);
             Console.WriteLine("\nExpected output: \n10 20 50 30 60 40");
@@ -204,16 +204,18 @@ namespace Graph_BFS_DFS
             AddEdge(NodeB, NodeD, 2);
             AddEdge(NodeD, NodeG, 3);
             AddEdge(NodeG, NodeE, 4);
-            AddEdge(NodeE, NodeC, 5);
-            AddEdge(NodeC, NodeA, 1);
-            AddEdge(NodeC, NodeF, 6);
-            AddEdge(NodeF, NodeE, 5);
+            AddEdge(NodeE, NodeC, 1);
             AddEdge(NodeE, NodeH, 7);
             AddEdge(NodeH, NodeI, 8);
             AddEdge(NodeI, NodeJ, 10);
             AddEdge(NodeJ, NodeH, 9);
+            AddEdge(NodeE, NodeF, 5);
+            AddEdge(NodeF, NodeC, 6);
+            AddEdge(NodeC, NodeA, 5);
+            
+            
             DFS(NodeA, 1);
-            Console.WriteLine("\nExpected output: \n===> (1) ===1===> (2) ===2===> (4) ===3===> (7) ===4===> (5) ===5===> (3) ===6===> (6) ===7===> (8) ===8===> (9) ===10===> (10)");
+            Console.WriteLine("\nExpected output: \n===> (1) ===1===> (2) ===2===> (4) ===3===> (7) ===4===> (5) ===5===> (3) ===6===> (6) ===7===> (8) ===8===> (9) ===10===> (10) ======> STOP");
             ClearVisited(NodeA);
             BFS(NodeA, 10);
             Console.WriteLine("\nExpected output: \n1 2 3 4 5 6 7 8 9 10");
@@ -238,31 +240,48 @@ namespace Graph_BFS_DFS
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine($"Looking for node with value {value} using DFS:");
             Stack<Node> Nodes = new Stack<Node>();
+            Stack<Node> LeftOverNodes = new Stack<Node>();
             Nodes.Push(Node);
-            while (Nodes.Count > 0)
+        startCheck:
+            if (Nodes.Count != 0)
             {
-                Node current = Nodes.Pop();
-                current.Visited = true;
-                Console.ForegroundColor = ConsoleColor.DarkRed;
-                Console.Write($"===> ({current.Value}) ===");
-                /*if (current.Value == value)
+                while (Nodes.Count > 0)
                 {
-                    Console.ForegroundColor = ConsoleColor.DarkBlue;
-                    Console.Write($"(!!Found it!!) ");
+                    Node current = Nodes.Pop();
+                    current.Visited = true;
                     Console.ForegroundColor = ConsoleColor.DarkRed;
-                }*/
-                foreach (Edge next in current.Edges)
-                {
-                    if (next.Node.Visited == false)
+                    Console.Write($"===> ({current.Value}) ===");
+                    /*if (current.Value == value)
                     {
-                        Nodes.Push(next.Node);
-                        Console.Write($"{next.Weight}");
-                        break;
+                        Console.ForegroundColor = ConsoleColor.DarkBlue;
+                        Console.Write($"(!!Found it!!) ");
+                        Console.ForegroundColor = ConsoleColor.DarkRed;
+                    }*/
+                    foreach (Edge next in current.Edges)
+                    {
+                        if (next.Node.Visited == false)
+                        {
+                            Nodes.Push(next.Node);
+                            Console.Write($"{next.Weight}");
+                            break;
+                        }
                     }
-                    
-                    
+                    for (int i = 1; i < current.Edges.Count; i++)
+                    {
+                        if (current.Edges[i].Node.Visited == false)
+                        {
+                            LeftOverNodes.Push(current.Edges[i].Node);
+                        }
+                    }
                 }
+                foreach (Node next in LeftOverNodes)
+                {
+                    if (next.Visited == false)
+                        Nodes.Push(next);
+                }
+                goto startCheck;
             }
+             
             Console.Write("===> STOP");
             Console.ResetColor();
         }
